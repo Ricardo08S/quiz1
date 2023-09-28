@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 1 WebPro</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/9eebd60898.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a
+          href="https://subakti.com/wp-content/uploads/2023-09-21-MM-Irfan-Subakti-EF234301-WEBPRO-E-Quiz-1.pdf"
+          >Quiz-1 Web Programming</a
+        >
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./profile">Profile</a></li>
+          <li><a href="./hometown">Hometown</a></li>
+          <li><a href="./food">Local Food</a></li>
+          <li><a href="./tourist">Tourist Places</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+    </div>
+
+    <!-- Profile -->
+    <div id="profile">
+      <div class="container">
+        <div class="row">
+          <div class="profile-1-col">
+            <img src="images/profile.png" />
+          </div>
+          <div class="profile-2-col">
+            <h1 class="sub-title">My Profile</h1>
+            <p>
+              Hello, nice to meet you, My name is Ricardo Supriyanto. I am
+              currently studying Informatics Engineering "Institut Teknologi
+              Sepuluh Nopember" (ITS), I am a junior web developer and want to
+              explore my field of expertise to find something exciting and
+              challenging. Hope you enjoy the results of the website that I am
+              currently working on. Have a Bright Day!!!
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Development</span><br />Web App Development</li>
+                  <span>Software Engineering</span><br />Design and Maintain Software Systems.
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2023 - Current</span><br />Event Data Management Staff
+                  Schematics 2023
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2019</span><br />SMA N 1 Kudus</li>
+                <li>
+                  <span>2022</span><br />Institut Teknologi Sepuluh Nopember
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright <i class="fa-regular fa-copyright"></i> Ricardo 2023</p>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
